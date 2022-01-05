@@ -42,7 +42,8 @@
         </div>
 
         <div class="modal">
-            <div class="card">
+            <div class="modal__overlay"></div>
+            <div class="modal__card">
 
                 <div class="close-btn">
                     <i class="fas fa-times-square"></i>
@@ -76,36 +77,6 @@
             </div>
         </div>
 
-        <script>
-            const modal = document.querySelector('.modal')
-            const contactBtn = document.querySelector('.contact-btn')
-            const closeBtn = document.querySelector('.close-btn')
-            const card = document.querySelector('.card')
-
-
-            function openModal() {
-                modal.classList.add('open')
-            }
-
-            function closeModal() {
-                modal.classList.remove('open')
-            }
-
-            contactBtn.addEventListener('click', openModal)
-            closeBtn.addEventListener('click', closeModal)
-            modal.addEventListener('click', closeModal)
-            card.addEventListener('click', function (event) {
-                event.stopPropagation()
-            })
-
-            const downloadResume = document.querySelector('.modal__download')
-            function alertMessage() {
-                alert('My CV will be update soon :)')
-            }
-
-            downloadResume.addEventListener('click', alertMessage)
-        </script>
-
 
     </div>
 
@@ -118,6 +89,7 @@
     </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
